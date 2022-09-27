@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts "Erasing previous flats"
+Flat.destroy_all
+puts "seeding NEW flats"
+
+30.times {
+  Flat.create!(
+    name: Faker::Movies::Lebowski.quote,
+    address: Faker::Address.street_address,
+    description: Faker::Cannabis.health_benefit,
+    price_per_night: rand(75..1000),
+    number_of_guests: rand(2..10))
+}
+
+puts ":dB is seeded"

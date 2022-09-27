@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+@import url("/components/container.css");
+@import url("/components/card.css");
+@import url("/components/links.css");
+@import url("/components/body.css");
